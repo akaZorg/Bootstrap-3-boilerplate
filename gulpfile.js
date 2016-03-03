@@ -60,7 +60,6 @@ gulp.task('html', function () {
  */
 gulp.task('serve', ['css', 'html'], function () {
 	browserSync.init({
-//		proxy: "pyrocms.dev"
 		server: config.distDir
 	});
 	gulp.watch(config.bowerDir + '/**/*.scss', ['css']);

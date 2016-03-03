@@ -6,7 +6,8 @@ A boilerplate that allows you to quickly start a Bootstrap 3 Project. Uses the S
 - Install [Node.js](http://nodejs.org)
 
 ```
- git clone git@github.com:akaZorg/Bootstrap-3-Boilerplate-Sass-Gulp <your project name>
+ git clone https://github.com/akaZorg/Bootstrap-3-boilerplate.git <your_project_name>
+
  cd <your project name>
  npm install
  bower install
