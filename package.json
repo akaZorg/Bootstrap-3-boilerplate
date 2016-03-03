@@ -1,0 +1,15 @@
+{
+  "name": "bootstrap-3-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-bower": "*",
+    "gulp-notify": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-uglifyjs": "*",
+    "browser-sync": "*"
+  }
+}
