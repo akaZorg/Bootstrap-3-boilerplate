@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "devDependencies": {
+    "browser-sync": "*",
+    "del": "^2.2.0",
     "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-bower": "*",
+    "gulp-html-extend": "*",
     "gulp-notify": "*",
     "gulp-sass": "*",
     "gulp-sourcemaps": "*",
     "gulp-uglifyjs": "*",
-    "browser-sync": "*"
+    "gulp-util": "*"
   }
 }

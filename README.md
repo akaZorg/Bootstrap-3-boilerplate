@@ -1,5 +1,6 @@
-# A Bootstrap 3 Boilerplate (Sass & Gulp)
-A boilerplate that allows you to quickly start a Bootstrap 3 Project. Uses the Sass version of Bootstrap 3, and Gulp to automate things.
+# Bootstrap 3 Boilerplate (Sass, Browsersync, Templates)
+A boilerplate for creating quick mockups using Twitter Bootstrap 3.
+Uses the Sass version of Bootstrap 3, and Gulp to automate things.
 
 
 ## Installation
@@ -22,6 +23,8 @@ A boilerplate that allows you to quickly start a Bootstrap 3 Project. Uses the S
 - gulp-sass
 - gulp-sourcemaps
 - gulp-uglifyjs
+- gulp-util
+- gulp-html-extend
 - browser-sync
 
 ### Original repository
