@@ -1,13 +1,17 @@
 /**
  * Variables overrides
  */
-$font-family-sans-serif:  'Open Sans', sans-serif;
+$font-family-sans-serif:  'Francois One', 'Fjalla One', sans-serif;
 $font-family-serif:       'Roboto Slab', serif;
 
-/**
- * Import Bootstrap
- * You can also include components individually
- * (check out bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss)
- */
-@import "bootstrap";
+
+// Overwrite Bootstrap base style
+@import "variables";
+
+
+// Import your Bootstrap components
+@import "bs-single-components";
+
+
+// Include your styles
 @import "theme";

@@ -8,11 +8,14 @@
     "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-bower": "*",
+    "gulp-cssmin": "^0.1.7",
     "gulp-html-extend": "*",
+    "gulp-imagemin": "*",
     "gulp-notify": "*",
     "gulp-sass": "*",
     "gulp-sourcemaps": "*",
     "gulp-uglifyjs": "*",
-    "gulp-util": "*"
+    "gulp-util": "*",
+    "imagemin-pngquant": "*"
   }
 }

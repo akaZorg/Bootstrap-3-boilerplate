@@ -1,14 +1,20 @@
-# Bootstrap 3 Boilerplate (Sass, Browsersync, Templates)
-A boilerplate for creating quick mockups using Twitter Bootstrap 3.
-Uses the Sass version of Bootstrap 3, and Gulp to automate things.
+# About
+Bootstrap 3 boilerplate for creating quick mockups, using:
 
+- Sass
+- Browsersync
+- HTML Templates
+- CSS, JS Builder + Minify + Uglifyjs
+- Image optimization
+
+## Preview
+* http://www.torrinha.com/labs/Bootstrap-3-boilerplate/index.html
 
 ## Installation
-- Install [Node.js](http://nodejs.org)
+- You need Node.js and Bower installed.
 
 ```
  git clone https://github.com/akaZorg/Bootstrap-3-boilerplate.git <your_project_name>
-
  cd <your project name>
  npm install
  bower install
@@ -16,20 +22,8 @@ Uses the Sass version of Bootstrap 3, and Gulp to automate things.
  open http://localhost:9001 in your browser
 ```
 
-### Gulp Extensions
-- gulp-autoprefixer
-- gulp-bower
-- gulp-notify
-- gulp-sass
-- gulp-sourcemaps
-- gulp-uglifyjs
-- gulp-util
-- gulp-html-extend
-- browser-sync
-
-### Original repository
-* https://github.com/SiamKreative/Bootstrap-3-Boilerplate-Sass-Gulp
 
 ### Inspiration
+* https://github.com/SiamKreative/Bootstrap-3-Boilerplate-Sass-Gulp (original version of this repository)
 * https://github.com/smakman/generator-gulp-bootstrap
 * https://github.com/niallobrien/generator-gulp-bootstrap
