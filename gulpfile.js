@@ -12,10 +12,10 @@ var gulp        = require('gulp'),
     browserSync = require('browser-sync').create();
 
 var paths = {
-    bs:    './bower_components/bootstrap-sass/assets',
-    bower: './bower_components',
-    src:   './src',
-    dist:  './public'
+    bs:   './node_modules/bootstrap-sass/assets',
+    lib:  './node_modules',
+    src:  './src',
+    dist: './public'
 };
 
 
@@ -28,39 +28,43 @@ gulp.task('clean', function() {
 
 // Fonts
 gulp.task('fonts', function () {
-    return gulp.src([paths.bs + '/fonts/**/*']).pipe(gulp.dest(paths.dist + '/fonts'));
+    return gulp
+            .src([paths.bs + '/fonts/**/*'])
+            .pipe(gulp.dest(paths.dist + '/fonts'));
 });
 
 
 // CSS
 gulp.task('css', function () {
-    return gulp.src(paths.src + '/css/build.scss')
-        .pipe(sass({
-            includePaths: [paths.bs + '/stylesheets']
-        }).on('error', gutil.log))
-        // .pipe(autoprefix('last 2 version'))
-        // .pipe(cssmin())
-        .pipe(gulp.dest(paths.dist + '/css'))
-        .pipe(browserSync.stream());
+    return gulp
+            .src(paths.src + '/css/build.scss')
+            .pipe(sass({
+                includePaths: [paths.bs + '/stylesheets']
+            }).on('error', gutil.log))
+            // .pipe(autoprefix('last 2 version'))
+            // .pipe(cssmin())
+            .pipe(gulp.dest(paths.dist + '/css'))
+            .pipe(browserSync.stream());
 });
 
 
 // Images
 gulp.task('img', function(){
-    return gulp.src(paths.src + '/img/*.*')
-        .pipe(imagemin({
-            progressive: true,
-            use: [pngquant()]
-        }).on('error', gutil.log))
-        .pipe(gulp.dest(paths.dist + '/img'));
+    return gulp
+            .src(paths.src + '/img/*.*')
+            .pipe(imagemin({
+                progressive: true,
+                use: [pngquant()]
+            }).on('error', gutil.log))
+            .pipe(gulp.dest(paths.dist + '/img'));
 });
 
 
 // Javascript
 gulp.task('js', function () {
     return gulp.src([
-            paths.bower + '/jquery/dist/jquery.min.js',
-            paths.bs + '/javascripts/bootstrap.js',
+            paths.lib + '/jquery/dist/jquery.min.js',
+            paths.bs + '/assets/javascripts/bootstrap.js',
             paths.src + '/js/*.js'
         ])
         .pipe(uglify('build.js', {
@@ -81,7 +85,6 @@ gulp.task('html', function () {
         .pipe(gulp.dest(paths.dist));
 });
 
-// Task that ensures the [js] task is complete before reloading browsers
 gulp.task('js-watch', ['js'], browserSync.reload);
 
 

@@ -17,5 +17,9 @@
     "gulp-uglifyjs": "*",
     "gulp-util": "*",
     "imagemin-pngquant": "*"
+  },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.1.1"
   }
 }
