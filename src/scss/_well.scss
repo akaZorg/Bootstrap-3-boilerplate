@@ -1,0 +1,24 @@
+//
+// Wells
+// --------------------------------------------------
+
+
+// Base class
+.well {
+    @extend .bg-default;
+    padding: 20px 35px;
+    margin-bottom: 0;
+
+    @media (min-width: $screen-xs-max) { margin-bottom: 20px; }
+    p {
+        margin: 17px 0;
+        font-size: 110%;
+    }
+    .btns {
+        margin-top: 25px;
+        .btn { margin-right: 15px; }
+    }
+    .title {
+        padding: 0;
+    }
+}

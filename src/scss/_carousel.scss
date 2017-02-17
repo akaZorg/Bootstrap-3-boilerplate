@@ -1,0 +1,79 @@
+//
+// Carousel Update
+// --------------------------------------------------
+
+
+// Wrapper for the slide container and indicators
+.carousel-inner {
+    @media (min-width: $screen-xs-max) { margin-bottom: 20px; }
+
+    > .item {
+        > img,
+        > a > img {
+            width: 100%;
+            height: 200px;
+            @media screen and (min-width: $screen-xs-max) {
+                height: auto;
+            }
+        }
+    }
+}
+
+// Optional indicator pips
+//
+.carousel-indicators {
+    display:none;
+}
+
+// Optional captions
+// -----------------------------
+// Hidden by default for smaller viewports
+.carousel-caption {
+    left: 15%;
+    right: 15%;
+    bottom: 10px;
+    padding: 0;
+
+    font-family: "Francois One";
+    text-align: center;
+    > h1,
+    .h1 {
+        font-size: 25px;
+        text-shadow: 3px 3px 3px #000, -1px -1px 3px #000;
+    }
+    > p.text {
+        font-size: 15px;
+        margin-bottom: 20px;
+        text-shadow: 4px 4px 2px #000, -1px -1px 2px #000;
+    }
+    @media screen and (min-width: $screen-xs-max) {
+        bottom: 15px;
+        > h1, .h1 {
+            font-size: 36px;
+        }
+        > p.text {
+            font-size: 19px;
+            margin-bottom: 35px;
+        }
+    }
+    @media screen and (min-width: $screen-sm-max) {
+        padding-bottom: 5px;
+        > h1, .h1 {
+            font-size: 51px;
+            margin-bottom: 10px;
+        }
+        > p.text {
+            font-size: 26px;
+            margin-bottom: 60px;
+        }
+    }
+    @media screen and (min-width: $screen-md-max) {
+        > h1, .h1 {
+            font-size: 61px;
+        }
+        > p.text {
+            font-size: 31px;
+            margin-bottom: 80px;
+        }
+    }
+}

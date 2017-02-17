@@ -1,0 +1,101 @@
+//
+// Page Cover
+// --------------------------------------------------
+
+//
+// Page Cover Base extending Jumbotron
+// --------------------------------------------------
+.page-cover {
+    // extend Jumbotron and reset
+    @extend .jumbotron;
+    @include transition(.2s ease-in-out);
+    > h1, .h1,
+      h2, .h2 {
+        margin: 0;
+    }
+
+    height: 200px;
+    margin: 0 !important;
+    position: relative;
+    text-align: left;
+    color: lighten($brand-primary, 15%);
+    background-image: url("../img/_blank_showroom.jpg");      // load this using JS
+    // background-image: url("../img/banner-02.jpg");      // load this using JS
+    background-color: #111;
+
+
+    .avatar {
+        width: 168px;
+        height: 168px;
+        top: 50px;
+        left: 30px;
+        position: absolute;
+        background-color: #fff;
+        border: solid 1px #111;
+        overflow: hidden;
+        @include transition(.2s ease-in-out);
+        img {
+            padding: 3px;
+        }
+        a.avatar-btn:link,
+        a.avatar-btn:visited {
+            @include transition(.2s ease-in-out);
+            opacity: 0.4;
+            position: absolute;
+            background: #fff no-repeat url("../img/icon-camera-32-blk.png") center 3px;
+            width: 160px;
+            top: 90px;
+            left: 3px;
+            text-align: center;
+            padding: 37px 0 4px 0;
+            color: #000;
+            z-index: 100;
+        }
+        a.avatar-btn:hover,
+        a.avatar-btn:active,
+        a.avatar-btn:focus {
+            opacity: 1;
+            background-color: #eee;
+            text-decoration: none;
+        }
+        &:hover:not(.my-avatar) {
+            border-color: $brand-primary;
+            background-color: $brand-primary;
+        }
+    }
+    .title {
+        min-width: 250px;
+        width: auto;
+        height: auto;
+        top: 100px;
+        left: 210px;
+        position: absolute;
+        .lead {
+            margin-bottom: 0;
+            color: $gray-light;
+            text-shadow: 0px 2px 2px #000, -1px -1px 2px #000;
+            a:link, a:visited {
+                text-decoration: underline;
+                color: lighten($brand-success, 50%);
+            }
+            a:hover, a:active, a:focus {
+                color: lighten($brand-success, 20%);
+            }
+        }
+    }
+    .actions-group {
+        font-family: $font-family-base;
+        min-width: 250px;
+        width: auto;
+        height: auto;
+        top: 140px;
+        right: 20px;
+        position: absolute;
+        text-align: right;
+    }
+
+
+    & + .page-wrap {
+        padding-top: 20px;
+    }
+}

@@ -1,0 +1,28 @@
+/**
+ * Variables overrides
+ */
+$font-theme:        'Francois One', Arial, sans-serif;
+$font-family-serif: 'Laila', 'Times New Roman', Times, serif;
+
+
+// Overwrite Bootstrap base style
+@import "variables";
+
+
+// Import your Bootstrap components
+@import "bs-single-components";
+
+
+// Include your styles
+@import "theme";
+@import "header.footer";
+@import "navs";
+// @import "thumbnails";
+// @import "carousel";
+// @import "jumbotron";
+// @import "well";
+// @import "gallery";
+// @import "core";                 //select2
+// @import "select2-bootstrap";
+// @import "jquery.datetimepicker";
+@import "jquery.fancybox";

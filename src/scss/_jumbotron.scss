@@ -1,0 +1,44 @@
+//
+// Jumbotron
+// --------------------------------------------------
+.jumbotron {
+    background:          no-repeat url("../img/banner-01.jpg");
+    background-position: 0 50%;
+    background-size:     cover;
+    color:               darken($brand-primary, 5%);
+    padding:             40px 50px;
+    margin-bottom:       20px;
+
+    font-family: $font-theme;
+    text-align:  center;
+
+    > h1, .h1,
+      h2, .h2 {
+        padding:     0;
+        margin:      10px 0 10px 10px;
+        text-shadow: 3px 3px 3px #000, -1px -1px 3px #000;
+    }
+
+    > .lead {
+        color:         lighten($brand-primary, 40%);
+        margin-bottom: 0;
+        text-shadow:   4px 4px 2px #000, -1px -1px 2px #000;
+    }
+
+    // Clear the gap between the Jumbotron and the parent container
+    // Used when viewing Account Profile
+    &.stacked {
+        margin-bottom:              0;
+        border-bottom-left-radius:  0;
+        border-bottom-right-radius: 0;
+    }
+
+    // Background Images Variations
+    &.banner02 { background-image: url("../img/banner-02.jpg"); }
+    &.banner03 { background-image: url("../img/banner-03.jpg"); }
+    &.banner04 { background-image: url("../img/banner-04.jpg"); }
+    &.banner05 { background-image: url("../img/banner-05.jpg"); }
+    &.banner06 { background-image: url("../img/banner-06.jpg"); }
+    &.banner07 { background-image: url("../img/banner-07.jpg"); }
+    &.banner08 { background-image: url("../img/banner-08.jpg"); }
+}

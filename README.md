@@ -14,10 +14,9 @@ Bootstrap 3 boilerplate for creating quick mockups, using:
 - You need Node.js and Bower installed.
 
 ```
- git clone https://github.com/akaZorg/Bootstrap-3-boilerplate.git <your_project_name>
- cd <your project name>
- npm install
- bower install
+ git clone https://github.com/akaZorg/Bootstrap-3-boilerplate.git <project_name>
+ cd <project_name>
+ yarn install
  gulp
  open http://localhost:9001 in your browser
 ```

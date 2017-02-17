@@ -1,0 +1,261 @@
+//
+// Gallery
+// --------------------------------------------------
+
+
+
+
+/**
+ * Classified Thumb
+ */
+@mixin thumb-classified() {
+    @include thumb-default(172px, 172px, 2px);
+    @include opacity(1);
+
+    &:link, &:visited {
+        img {
+            @include opacity(0.4);
+        }
+        span {
+            @include transition(.2s ease-in-out);
+            display:  block;
+            position: absolute;
+        }
+        .title {
+            color:         #000;
+            top:           5px;
+            left:          5px;
+            font-size:     95%;
+            width:         auto;
+            max-width:     161px;
+            padding:       2px 3px;
+            text-overflow: ellipsis;
+            overflow:      hidden;
+            white-space:   nowrap;
+        }
+        .price {
+            background-color: #222;
+            color:            #ddd;
+            text-align:       right;
+            padding:          0 4px;
+            bottom:           10px;
+            right:            10px;
+            font-size:        120%;
+            font-family:      "Francois One";
+        }
+    }
+    &:hover, &:active {
+        img {
+            @include opacity(1);
+        }
+        .title,
+        .price {
+            color:            #111;
+            background-color: $brand-primary;
+        }
+        .price {
+            font-size: 145%;
+        }
+        .handle {
+            @include opacity(1);
+            cursor: move;
+        }
+    }
+}
+
+
+/**
+ * Gallery
+ *
+ * thumb-default(172px, 172px, 2px);
+ */
+.gallery {
+    margin-bottom: 20px;
+    li {
+        list-style:       none;
+        position:         relative;
+        overflow:         hidden;
+        float:            left;
+        width:            172px !important;
+        height:           172px !important;
+        margin:           0 10px 10px 0;
+        color:            #222;
+
+        a.thumb {
+            @include thumb-classified();
+            .handle {
+                width:      30px;
+                height:     30px;
+                overflow:   hidden;
+                top:        125px;
+                right:      5px;
+                opacity:    0;
+                background: no-repeat transparent url(../img/move.png) 0 0;
+            }
+            &:hover, &:active {
+                .handle {
+                    @include opacity(1);
+                    cursor: move;
+                }
+            }
+        }
+    }
+    padding: 0;
+
+
+    /**
+     * THUMBNAIL RIDE
+     * Used at My-account, My-rides, Biker and Biker-rides
+     *
+     * thumb-default(172px, 172px, 2px);
+     */
+    &.thumb-default li a.thumb {
+        &:hover, &:active {
+            text-decoration: none;
+            span {
+                @include transition(.2s ease-in-out);
+                color: $brand-primary;
+                background-color: transparent;
+            }
+        }
+        padding: 10px;
+        span {
+            color: #eee;
+            display: block;
+            position: absolute;
+            width: auto;
+        }
+        > span.glyphicon {
+            font-size: 220%;
+            top: 14px;
+            left: 10px;
+        }
+        .mp {
+            max-width: 161px;
+            max-height: 80px;
+            height: auto;
+            top: 12px;
+            left: 48px;
+            padding: 0;
+            font-size: 90%;
+            white-space: normal;
+            overflow: hidden;
+        }
+        .total {
+            text-align: right;
+            top: 100px;
+            right: 10px;
+        }
+        .date {
+            font-size: 150%;
+            text-align: right;
+            top: 126px;
+            right: 10px;
+        }
+    }
+
+
+    /**
+     * Ride Thumbnails, showing at my-account, my-rides, biker and biker-rides
+    &.thumb-sm li a.thumb {
+        &:hover, &:active {
+            text-decoration: none;
+            span {
+                @include transition(.2s ease-in-out);
+                color: $brand-primary;
+                background-color: transparent;
+            }
+        }
+        padding: 10px;
+        span {
+            color: #eee;
+            display: block;
+            position: absolute;
+            width: auto;
+        }
+        .title {
+            color:            #111;
+            position:         absolute;
+            top:              5px;
+            left:             5px;
+            font-size:        85%;
+            width:            auto;
+            max-width:        161px;
+            padding:          4px 3px;
+            text-overflow:    ellipsis;
+            overflow:         hidden;
+            white-space:      nowrap;
+            background-color: #eee;
+        }
+        .price {
+            text-align: right;
+            top: 130px;
+            right: 10px;
+        }
+    }
+     */
+
+
+    /**
+     * Ride Riders Thumbnails, showing at Ride sidebar
+     *
+     * thumb-default(81px, 81px, 2px);
+     */
+    &.thumb-xs {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        li {
+            margin: 0 2px 2px 0;
+            @media (min-width: $screen-md-max) {
+                width:  81px !important;
+                height: 81px !important;
+            }
+            @media (max-width: $screen-md-max) {
+                width:  60px !important;
+                height: 60px !important;
+            }
+            a.thumb {
+                @include thumb-default(81px, 81px, 2px);
+                .close {
+                    margin-right: 0;
+                    width:        14px;
+                    height:       14px;
+                    display:      block;
+                }
+                &.thumb-temp {
+                    border-color: $brand-success;
+                }
+                &:hover.thumb-temp {
+                    border-color: $brand-primary;
+                }
+                @media (max-width: $screen-md-max) {
+                    width:  60px !important;
+                    height: 60px !important;
+                }
+            }
+            &.active a.thumb {
+                border-color: $brand-primary;
+            }
+        }
+    }
+}
+
+
+/*    Modal Photo Manager    */
+/* ------------------------------------------------- */
+.modal-photo-manager {
+    color: #444;
+    .wrpimg {
+        float: left;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+        img {
+            opacity: 1;
+            position: absolute;
+            width: auto;
+            height: 100%;
+        }
+    }
+}

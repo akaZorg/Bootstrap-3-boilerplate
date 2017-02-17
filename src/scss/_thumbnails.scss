@@ -1,0 +1,15 @@
+//
+// Thumbnails
+// --------------------------------------------------
+
+
+// Mixin and adjust the regular image class
+.thumbnail {
+  display: inline-block;
+
+  > img,
+  a > img {
+    max-width: 100% !important;
+    display: block;
+  }
+}

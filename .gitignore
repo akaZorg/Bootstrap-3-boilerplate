@@ -1,3 +1,5 @@
 node_modules
 public/*
-npm-debug.log
+
+# keep these folders
+!.keep

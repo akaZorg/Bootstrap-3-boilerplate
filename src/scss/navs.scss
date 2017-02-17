@@ -1,0 +1,135 @@
+/*    Navs    */
+/* ------------------------------------------------- */
+
+
+
+/*    Navbar Inverse Main    */
+/* ------------------------------------------------- */
+// .page-header .navbar {margin-bottom: 20px;}
+
+
+/*    Navbar Inverse Main    */
+/* ------------------------------------------------- */
+.navbar-inverse {
+    padding-left: 15px;
+    .container-fluid {
+        padding-right:0;
+    }
+    > div .navbar-nav li a {
+        font-size: 16px;
+        font-family: $font-theme;
+        padding-right: 0;
+        padding-left: 8px;
+        margin: 2px 0 0 3px;
+        line-height: 15px;
+        outline: none;
+        // text-transform: uppercase;
+        &:hover, &:active {
+            text-decoration: underline;
+        }
+        @media (min-width: $screen-xs-max) {
+            font-size: 17px;
+            line-height: 17px;
+            margin: 17px 0 0 7px;
+        }
+        @media (min-width: $screen-sm-max) {
+            font-size: 19px;
+            line-height: 19px;
+            margin: 17px 0 0 20px;
+        }
+        @media (min-width: $screen-md-max) {
+            font-size: 21px;
+            line-height: 21px;
+            margin: 25px 0 0 20px;
+        }
+    }
+
+    /*    Navbar Content Page (my-account, biker, ...)    */
+    /* ------------------------------------------------- */
+    &.navbar-page {
+        margin-top:   -25px;
+        margin-right: 5px;
+
+        .navbar-toggle {
+            margin: 0;
+            margin-left: 10px;
+        }
+        > div li a {
+            margin: 0 0 0 23px;
+        }
+    }
+}
+
+
+.navbar-sub-page a.list-group-item {
+    @media (max-width: $screen-xs-max) {
+        display: inline-block;
+        border:  none;
+        padding: 10px 12px;
+    }
+}
+
+
+/*    Navbar Brand    */
+/* ------------------------------------------------- */
+.navbar-brand {
+    width: 190px;
+    height: 26px;
+    padding:3px 0 0 34px;
+    margin-top: 10px;
+    background: transparent url("../img/logo-alt-02.png") no-repeat 0 0;
+    text-indent: -9999px;
+    @media (min-width: $screen-sm-min) {
+        background-size: cover;
+        background-image: url("../img/logo.png");
+        width: 120px;
+        height: 69px;
+    }
+    @media (min-width: $screen-md-max) {
+        width: 160px;
+        height: 92px;
+    }
+}
+
+
+/*    Navbar Top Mini    */
+/* ------------------------------------------------- */
+.navbar-top-mini {
+    margin-bottom: 5px;
+    .nav-user {
+        text-align: right;
+        color: #ddd;
+        > a {
+            margin: 0 3px;
+            color: #ddd;
+            &:hover,
+            &:active {
+                color: $brand-primary;
+                text-decoration: none;
+            }
+            .alert-count {
+                color: #000;
+                background-color: $brand-primary;
+                @include gradient-vertical($brand-primary, darken($brand-primary, 10%));
+                display: inline-block;
+                padding: 0 4px;
+                border-radius: 3px;
+                font-size: 11px;
+                font-weight: bold;
+                text-align: center;
+                margin-left: 4px;
+            }
+        }
+        .avatar-mini img {
+            margin-right: 5px;
+        }
+        .caret {
+            // margin-left: 0;
+            border-top:   5px dashed;
+            border-top:   5px solid \9; // IE8
+            border-right: 5px solid transparent;
+            border-left:  5px solid transparent;
+        }
+    }
+}
+

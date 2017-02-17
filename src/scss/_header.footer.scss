@@ -1,0 +1,84 @@
+//
+// Header / Footer
+// --------------------------------------------------
+
+
+//
+//    Header
+// -------------------------------------------------
+.page-header {
+    margin: 15px 0 0 0;
+    border: none;
+}
+
+
+//
+//    Footer
+// -------------------------------------------------
+.footer {
+    position:       absolute;
+    bottom:         0;
+    height:         auto;
+    width:          100%;
+    margin-top:     45px;
+    padding-top:    15px;
+    padding-bottom: 5px;
+    font-size:      90%;
+    background:     no-repeat transparent url("../img/bg-footer.jpg") center bottom;
+
+    @media (max-width: $screen-sm-min) {
+        height:     160px;
+        background: none;
+    }
+
+    ul {
+        @include list-unstyled();
+
+        @media (max-width: $screen-sm-max) {
+            display: inline-block;
+        }
+        li {
+            padding: 3px 0;
+
+            &:first-child {
+                font-size:      110%;
+                font-weight:    bold;
+                padding-bottom: 6px;
+            }
+
+            @media (max-width: $screen-sm-max) {
+                display: inline;
+                &:not(:first-child):before {
+                    content: " | ";
+                }
+            }
+        }
+    }
+    .container .row:last-child {
+        margin-top: 15px;
+        padding:    10px 0;
+        border-top: 1px solid #222;
+    }
+    .logo {
+        margin-right:    10px;
+        display:         inline-block;
+        width:           80px;
+        height:          46px;
+        background:      transparent url("../img/logo.png") no-repeat;
+        background-size: cover;
+
+        @media (min-width: $screen-md-min) {
+            width:  120px;
+            height: 69px;
+        }
+        @media (min-width: $screen-md-max) {
+            width:  160px;
+            height: 92px;
+        }
+    }
+}
+
+.footer > .container {
+    padding-right: 30px;
+    padding-left:  30px;
+}

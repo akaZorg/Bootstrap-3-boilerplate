@@ -1,0 +1,84 @@
+<div class="container-fluid">
+    <div class="row page-wrap page-content">
+        <div class="col-md-6 col-md-offset-3">
+            <!-- Register Form -->
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="fname" class="col-md-3 control-label">First_name</label>
+                    <div class="col-md-9">
+                        <input class="form-control" name="fname" type="text" value="_usr___u_fname" data-validation="alphanumeric" data-validation-allowing=" " data-validation-error-msg="L__err_NAME_FIRST">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lname" class="col-md-3 control-label">Last_name</label>
+                    <div class="col-md-9">
+                        <input class="form-control" name="lname" type="text" value="_usr___u_lname" data-validation="alphanumeric" data-validation-allowing=" " data-validation-error-msg="L__err_NAME_LAST">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="nickname" class="col-md-3 control-label">Nickname</label>
+                    <div class="col-md-9">
+                        <input class="form-control" name="nickname" type="text" value="_usr___u_nickname" data-validation="alphanumeric" data-validation-allowing="-_ " data-validation-error-msg="L__err_NICKNAME">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="uemail" class="col-md-3 control-label">Email</label>
+                    <div class="col-md-9">
+                        <input class="form-control" name="uemail" type="text" value="_usr___u_email" data-validation="email" data-validation-error-msg="L__err_EMAIL">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="upwd" class="col-md-3 control-label">Password</label>
+                    <div class="col-md-9">
+                        <input class="form-control" id="upwd" name="upwd" type="password" data-validation="strength" data-validation-strength="1" data-validation-error-msg="L__err_PWD_WEAK">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="country" class="col-md-3 control-label">Country</label>
+                    <div class="col-md-9">
+                        <select class="form-control" name="country" id="country" size="1" data-validation="required" data-validation-error-msg="L__err_COUNTRY">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="city_state" class="col-md-3 control-label">City_state</label>
+                    <div class="col-md-9">
+                        <select class="form-control" name="city_state" id="city_state" size="1" disabled="disabled" data-validation="required" data-validation-error-msg="L__err_STATE"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="captacha" class="col-md-3 control-label">captcha</label>
+                        <div class="col-md-9">
+                            <input class="form-control" name="captcha" id="captcha" data-validation="spamcheck" data-validation-captcha="caption_captcha" data-validation-error-msg="msg_err_CAPTCHA">
+
+                        <div class="checkbox">
+                            <label><input type="checkbox"> I accept the terms and conditions</label> <a href="#">read here</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-9 col-md-offset-3 text-right">
+                        <button type="reset" class="btn btn-default">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+                <input type="hidden" id="lat" name="lat" value="_usr___u_latitude">
+                <input type="hidden" id="lng" name="lng" value="_usr___u_longitude">
+            </form>
+        </div>
+
+
+        <div class="col-md-3">
+        <!-- <div class="col-md-2" style="background-color: #222;"> -->
+            <div class="list-group">
+                <a class="list-group-item" href="sign-in.html">already_registered_login_here</a>
+                <a class="list-group-item" href="password_forgot.html">password_forgot</a>
+            </div>
+        </div>
+    </div>
+</div>

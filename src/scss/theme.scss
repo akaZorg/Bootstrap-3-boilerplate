@@ -1,0 +1,318 @@
+/* Generic Styles
+-------------------------------------------------- */
+
+/* Generic Colors
+-------------------------------------------------- */
+.gray      {color: #ccc; }
+.gray-dark {color: #444; }
+.primary   {color: $brand-primary; }
+.green     {color: $brand-success; }
+.blue      {color: $brand-info; }
+
+$brand-border-color: #0e0e0e;
+
+
+/* Generic Styles
+-------------------------------------------------- */
+.border-default {
+    border-style: solid;
+    border-width: 1px;
+    border-color: $brand-border-color;
+}
+
+.bg-default {
+    @extend .border-default;
+    background: transparent repeat url("../img/lines1.gif");
+}
+.wrap-loading {
+    overflow: hidden;
+    background: #fff no-repeat url("../img/ajax-loader.gif") 50% 70%;
+    width: 100%;
+    min-height: 200px;
+    text-align: center;
+    .title {
+        margin-top: 50px;
+    }
+}
+
+@mixin thumb-default($thumb-width, $thumb-height, $border-width) {
+    width:            $thumb-width;
+    height:           $thumb-height;
+    float:            left;
+    position:         relative;
+    overflow:         hidden;
+    background-color: #000;
+
+    @include transition(border .2s ease-in-out);
+    &:link, &:visited {
+        border: $brand-border-color solid $border-width;
+    }
+    &:hover, &:active {
+        border-color: $brand-primary;
+    }
+    img {
+        height: auto;
+        position: absolute;
+        top: 50%;
+        transform: translate(-20%, -50%);
+        width: 180%;
+    }
+}
+
+.no-gutter > [class*='col-'],
+.no-gutter {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+.no-padding > [class*='col-'],
+.no-padding {
+   padding: 0 !important;
+}
+
+/* Generic Layout
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 180px;
+    background: no-repeat #000 url("../img/bg-top.jpg") 50% 0;
+
+    @media (min-width: $screen-xs-max) { margin-bottom: 280px; }
+    @media (min-width: $screen-sm-max) { margin-bottom: 250px; }
+}
+a {
+    &:link, &:visited, &:hover, &:active, &:focus {
+     outline: none !important;
+    }
+}
+
+
+
+/*    Page Wrapper with style                        */
+/* ------------------------------------------------- */
+.page-wrap {
+    @extend .bg-default;
+    border-top-color: #111;
+    border-right-color: #111;
+    padding:          25px 15px ;
+
+    > h3, .h3,
+    h4, .h4 {
+        margin-top:   5px;
+        padding-left: 5px;
+        display:      inline-block;
+    }
+    &.stacked {
+        border-top-color: transparent;
+    }
+    .row-inline {
+        margin-bottom: 20px;
+    }
+
+}
+
+
+/*    Page Content where entry goes                  */
+/* ------------------------------------------------- */
+.page-content {
+    color:       #aaa;
+    padding-top: 15px;
+
+    &.cms-txt {
+        p {
+            margin:      22px 0;
+            font-size:   110%;
+            line-height: 26px;
+        }
+    }
+    > h3 {
+        // color: #ccc;
+        &:not(:first-child) {
+            margin-top: 50px;
+        }
+    }
+}
+
+
+
+
+/*    Sidebar Nav                      */
+/* ------------------------------------------------- */
+.list-group .glyphicon {
+    margin-right: 8px;
+}
+
+
+/*    Filter inside Generic Content    */
+/* ------------------------------------------------- */
+.filter-wrap {
+    color:         #888;
+    margin-bottom: 10px;
+    span {
+        display:     inline-block;
+        margin-top:  10px;
+    }
+    label {
+        font-weight:   normal;
+        padding-right: 5px;
+    }
+    .form-inline {
+        margin-top:    0;
+        padding-right: 10px;
+
+        .form-group:not(:first-child) {
+            @media (max-width: $screen-xs-min) {
+                margin-left: 25px;
+            }
+        }
+    }
+}
+
+
+
+/*    Media Content    */
+/* ------------------------------------------------- */
+.media:not(:last-child) {
+    border-bottom:    solid 2px #000;
+    border-right:     solid 1px #000;
+    background-color: #111;
+    padding:          20px 10px 10px 10px;
+
+    .media-body {
+        padding: 0 10px;
+    }
+}
+
+
+
+/*    Tables - Messages   */
+/* ------------------------------------------------- */
+table.messages tbody tr {
+    color:       darken($brand-success, 10%);
+    font-weight: bold;
+
+    a:link, a:visited {
+        color: darken($brand-success, 10%);
+    }
+
+    &.viewed {
+        color:       lighten($gray, 5%);
+        font-weight: normal;
+
+        a:link, a:visited {
+            color: lighten($gray, 5%);
+        }
+    }
+}
+
+
+
+/*    Form Control   */
+/* ------------------------------------------------- */
+label {
+    cursor: pointer;
+}
+form {
+    .title {
+        display:       block;
+        margin-bottom: 20px;
+        text-align:    center;
+    }
+    .title-lf {
+            display:       block;
+            margin-bottom: 20px;
+    }
+}
+.input-group .form-control {
+    border: 0;
+}
+.form-group {
+    position: relative;
+    label {
+        font-weight: normal;
+    }
+}
+.form-control {
+    padding-right: 30px !important;
+}
+// Icon inside input icon
+.inp-icon-wrp {
+    position: relative;
+    .glyphicon {
+        position: absolute;
+        right:    0;
+        padding:  9px 10px;
+        color:    $input-color;
+        cursor:   pointer;
+    }
+}
+
+
+
+// button > .glyphicon,
+// .btn > .glyphicon {
+//     margin-right: 4px;
+// }
+
+
+
+/*    Text Report Wrap    */
+.txtReport {
+    line-height:      22px;
+    font-size:        13px;
+    margin-bottom:    20px;
+    padding:          10px;
+    display:          none;
+    color:            #FF9900;
+    background-color: #461c00;
+}
+.txtReport.show {display:block;}
+.txtReport.success {
+    display:          block;
+    color:            #333;
+    background-color: #2a3d04;
+}
+
+
+
+
+/*    Loading Animation    */
+/*    Read: http://www.sitepoint.com/css3-ajax-loading-icon/  */
+/* -------------------------------------------------------------- */
+.loading-wrap {
+    position: relative;
+}
+.loading {
+    position:         absolute;
+    z-index:          1100;
+    width:            100%;
+    height:           100%;
+    top:              0;
+    left:             0;
+    text-align:       center;
+    color:            lighten($brand-info, 20%);
+    background-color: #000;
+    .ani {
+        width:              50px;
+        height:             50px;
+        margin:             50px auto 15px auto ;
+        border:             7px solid $brand-info;
+        border-radius:      50%;
+        border-right-color: transparent;
+
+        -webkit-animation: spin 1.3s linear infinite;
+                animation: spin 1.3s linear infinite;
+    }
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); opacity: 0.6; }
+    50%  { -webkit-transform: rotate(180deg); transform: rotate(180deg); opacity: 1; }
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); opacity: 0.6; }
+}
+@keyframes spin {
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); opacity: 0.6; }
+    50%  { -webkit-transform: rotate(180deg); transform: rotate(180deg); opacity: 1; }
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); opacity: 0.6; }
+}

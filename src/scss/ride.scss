@@ -1,0 +1,146 @@
+//
+// Ride
+// --------------------------------------------------
+
+// Bar itself
+// -------------------------
+
+.mapride {
+    position:absolute;
+    width:100% !important;
+    height:550px !important;
+}
+
+
+
+
+//
+// Ride Steps using Page Cover actions-group
+// --------------------------------------------------
+.page-cover .actions-group.progress-bar-selector {
+    top: 95px;
+    width: 250px;
+    right: 50px;
+}
+
+
+
+.ride-steps-nav-wrap {
+    @extend .center-block;
+    width: 100%;
+    height: 100px;
+    // padding-bottom: 10px;
+    position: relative;
+    .ride-steps-nav {
+        a {
+            @include transition(.2s ease-in-out);
+            z-index: 10;
+            margin-left: -50px;
+            padding: 0 !important;
+            position: absolute;
+            float: left;
+            width: 100px;
+            height: 100px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            // color: #ddd;
+            // color: lighten(#222, 30%);
+            color: darken($brand-success, 20%);
+            &:hover,
+            &:focus,
+            &:active, &.active {
+                color: $brand-success;
+            }
+            &.active:hover, &.active:active {
+                color: lighten($brand-success, 15%);
+            }
+            &.locked {
+                color: #222;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: lighten(#222, 10%);
+                    cursor: not-allowed;
+                }
+            }
+            text-decoration: none;
+            outline: none;
+            .glyphicon {
+                @extend .center-block;
+                font-size: 25px;
+                width: 40px;
+                height: 67px;
+            }
+
+            &.one {left: 0%;}
+            &.two {left: 33%;}
+            &.three {left: 67%;}
+            &.four {left: 100%;}
+        }
+        // @media (min-width: $screen-md-min) {
+        //     min-height: 550px !important;
+        // }
+        // > h2, .h2 {
+        //     margin-top: 0px;
+        // }
+    }
+    .progress {
+        position: absolute;
+        top: 43px;
+        width: 100%;
+        height: 8px;
+        padding: 0 !important;
+    }
+    .progress-dots {
+        top: 46px;
+        width: 100%;
+        position: relative;
+        margin-left: 1px;
+        .one,
+        .two,
+        .three,
+        .four {
+            position: absolute;
+            z-index: 1;
+            margin-left: -9px;
+            width: 16px;
+            height: 16px;
+            border-radius: 15px;
+            border: 5px solid $brand-success;
+            background-color: darken($brand-success, 20%);
+            &.no-color{
+                border-color: $progress-bg;
+                background-color: #000;
+            }
+      }
+      .one {left: 0%;}
+      .two {left: 33%;}
+      .three {left: 67%;}
+      .four {left: 100%;}
+    }
+}
+
+
+.sidebar-ride {
+    // @extend .bg-default;
+    // height:550px !important;
+    // padding: 0 20px 40px 15px;
+    padding: 0;
+    margin: 0;
+    display:block;
+    min-height: 250px !important;
+    @media (min-width: $screen-md-min) {
+        min-height: 550px !important;
+    }
+    h2, .h2 {
+        margin-top: 0;
+        color: darken($brand-info, 5%);
+        font-size: 28px;
+    }
+
+    .form-group {
+        margin: 20px 0;
+    }
+}

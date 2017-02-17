@@ -1,0 +1,66 @@
+//
+// Progress bars
+// --------------------------------------------------
+
+// Bar itself
+// -------------------------
+
+// Outer container
+.progress {
+  height: 12px;
+  margin-bottom: $line-height-computed;
+}
+
+// Bar of progress
+.progress-bar {
+  float: left;
+  width: 2%;
+  height: 100%;
+  font-size: $font-size-small;
+  line-height: $line-height-computed;
+  color: $progress-bar-color;
+  text-align: center;
+}
+
+
+
+// Progress Dots for each step
+// -------------------------------------
+.progress-dots {
+  position: relative;
+  .one, .two, .three, .four {
+    position: absolute;
+    z-index: 1;
+    margin-top: -7px;
+    margin-left: -13px;
+    width: 26px;
+    height: 26px;
+    border-radius: 15px;
+    background-color: $progress-bar-bg;
+    &.no-color{
+      background-color: $progress-bg;
+    }
+  }
+  .one {left: 0%;}
+  .two {left: 33%;}
+  .three {left: 67%;}
+  .four {left: 100%;}
+
+}
+// Variations
+// -------------------------
+.progress-dots-success {
+  color: $progress-bar-success-bg;
+}
+
+.progress-dots-info {
+  color: $progress-bar-info-bg;
+}
+
+.progress-dots-warning {
+  color: $progress-bar-warning-bg;
+}
+
+.progress-dots-danger {
+  color: $progress-bar-danger-bg;
+}
